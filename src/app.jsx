@@ -16,7 +16,7 @@ root.render(<React.StrictMode>
     <PrimeReactProvider  
     // value={{ unstyled: true, pt: Tailwind }}
     >
-        <MemoryRouter basename="/">
+        <MemoryRouter basename="">
             <App />
         </MemoryRouter>
     </PrimeReactProvider>

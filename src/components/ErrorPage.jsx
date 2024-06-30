@@ -1,6 +1,9 @@
-import { useNavigate, Link, } from "react-router-dom"
+import { useNavigate, Link, useLocation} from "react-router-dom"
 import React from "react"
 export default function ErrorPage ({link}) {
+    const location = useLocation();
+
+    const currentPath = location.pathname;
 const navigate = useNavigate()
     return (
     <div className='relative flex flex-column justify-content-center items-center w-full gap-4 px-4 md:px-20 xl:px-40 md:gap-5'>
@@ -8,8 +11,9 @@ const navigate = useNavigate()
             404</h1>
             <div className="m-auto flex flex-column justify-content-center ">
             <p className='text-3xl font-bold uppercase text-center'>Oops!, this is a 404 page.</p>
-        <p className='text-2xl font-medium break-words text-dull'> You may have
+            <p className='text-2xl font-medium break-words text-dull'> You may have
             mistyped the address, or the page has been moved to another URL.</p>
+        <p className='text-xl font-semibold text-dull'> Current Path is <span className="underline">{currentPath}</span></p>
 
             <div className='flex flex-column justify-content-between w-full gap-4 md:flex-row md:gap-8 xl:px-8 mt-4'>
             <a to="#" onClick={ () => navigate(-1)}

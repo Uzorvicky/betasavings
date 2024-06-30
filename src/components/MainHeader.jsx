@@ -27,9 +27,11 @@ useEffect(()=>{
         <div className=" px-1 align-content-center">
           <Button
           className="block"
-      // rounded
-      raised 
-      text icon="pi pi-bars" onClick={() => setVisible(!open)}
+          security=""
+      rounded
+      // raised 
+      text 
+      icon="pi pi-bars" onClick={() => setVisible(!open)}
      />
           </div>
  
