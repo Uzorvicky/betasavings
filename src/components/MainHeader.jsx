@@ -25,14 +25,7 @@ useEffect(()=>{
     <div className="bg-slate-500 border-bottom-1 shadow-gray-300 border-l //h-15rem flex items-center justify-content-center flex-wrap min-w-fit">
       <div className="flex flex-col md:flex-row align-content-center justify-content-between gap-2 min-w-fit w-full items-center p-2">
         <div className=" px-1 align-content-center">
-          <Button
-          className="block"
-          security=""
-      rounded
-      // raised 
-      text 
-      icon="pi pi-bars" onClick={() => setVisible(!open)}
-     />
+          <span className="pi pi-bars block" style={{color:"#000"}} onClick={() => setVisible(!open)}></span>
           </div>
  
         <div className="flex flex-wrap align-content-center gap-1 gap-x-2 md:gap-2 md:gap-x-5 align-middle px-1">

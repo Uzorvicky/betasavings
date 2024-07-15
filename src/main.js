@@ -9,8 +9,15 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1000,
+    width: 1050,
     height: 700,
+    backgroundColor:"#ddd",
+    minWidth:700,
+    minHeight:400,
+    title:"BETA SAVINGS",
+    autoHideMenuBar:true,
+    show:false,
+    focusable:true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -25,6 +32,9 @@ const createWindow = () => {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
+  mainWindow.on('ready-to-show', () => {
+    mainWindow.show()
+  })
 };
 
 // This method will be called when Electron has finished
@@ -32,6 +42,7 @@ const createWindow = () => {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
+  
 
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.

@@ -9,7 +9,7 @@ import SideNav from "../../components/SideNav";
 function Layout() {
   const [open, setVisible] = useState(false)
   return (
-    <div className="overflow-hidden h-screen w-screen">
+    <div className="overflow-hidden h-screen w-screen surface-card">
     <div className="flex flex-row h-screen  w-screen md:w-full overflow-hidden">
       <Sidebar visible={open} onHide={(e) => setVisible(e)}
         pt={{root:"p-0 m-0 w-17rem overflow-hidden",
@@ -18,7 +18,7 @@ function Layout() {
       </Sidebar>
       <div className="w-full  h-screen  overflow-hidden //overflow-y-auto flex flex-column p-0 gap-2">
         <MainHeader open={open} setVisible={(e) =>setVisible(e)} /> 
-      <main className="overflow-hidden h-screen w-full  pb-2">
+      <main className="overflow-hidden h-screen w-full  pb-2 ">
       <PageContent />
       </main>
       </div>
